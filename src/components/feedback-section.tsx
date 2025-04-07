@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import React from "react";
 
 export default function FeedbackSection() {
+  const [selectedStarIndex, setSelectedStarIndex] = React.useState(0);
   return (
     <div className="flex justify-center bg-white w-full">
       <div className="flex flex-row items-end justify-center gap-14 my-30 pb-10 w-[1140px]">
@@ -26,15 +30,14 @@ export default function FeedbackSection() {
             Rate Your Reading <br /> Experience:
           </span>
           <div className="flex flex-row gap-2 items-center my-20">
-            <Image src="/icons/starEmpty.svg" alt="Star" width={60} height={60} />
-
-            <Image src="/icons/starEmpty.svg" alt="Star" width={60} height={60} />
-
-            <Image src="/icons/starEmpty.svg" alt="Star" width={60} height={60} />
-
-            <Image src="/icons/starEmpty.svg" alt="Star" width={60} height={60} />
-
-            <Image src="/icons/starEmpty.svg" alt="Star" width={60} height={60} />
+            {[1, 2, 3, 4, 5].map((_, index) => (
+              <Star
+                key={index}
+                filled={selectedStarIndex > index}
+                onMouseEnter={() => setSelectedStarIndex(index + 1)}
+                onMouseLeave={() => setSelectedStarIndex(0)}
+              />
+            ))}
           </div>
           <span className="text-2xl mb-5">
             <b>Rating: 4.74/5</b>
@@ -43,5 +46,33 @@ export default function FeedbackSection() {
         </div>
       </div>
     </div>
+  );
+}
+
+interface StarProps {
+  filled: boolean;
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+}
+
+function Star({ filled, onMouseEnter, onMouseLeave }: StarProps) {
+  return (
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 24 24"
+      className="cursor-pointer"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+    >
+      <path
+        d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+        fill={filled ? "#fcd156" : "transparent"}
+        stroke="#ebebeb"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }
