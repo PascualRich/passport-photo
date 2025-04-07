@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function MediaPartners() {
   return (
     <div className="flex justify-center bg-[#f3f8fb] w-full">
-      <div className="flex flex-row items-center justify-center gap-14 mt-10 border-b border-b-[#dcdde6] pb-10 max-w-[1400px]">
-        <span>As seen in</span>
+      <div className="flex flex-row flex-wrap items-center justify-center gap-14 mt-10 border-b border-b-[#dcdde6] pb-10 max-w-[1400px]">
+        <span className="w-full lg:w-auto text-center">As seen in</span>
         <div className="w-[160px] h-[32px] relative">
           <Image src="/icons/bloomberg.svg" alt="Bloomberg" fill />
         </div>

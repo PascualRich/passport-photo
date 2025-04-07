@@ -57,15 +57,15 @@ export default function TopBarNavigation() {
         ref={headerRef}
         onMouseEnter={() => setHeaderHoverState(true)}
         onMouseLeave={() => setHeaderHoverState(false)}
-        className={cn("w-full fixed z-20", {
-          "bg-white": headerHover,
-          "bg-[#f0eef9]": !headerHover,
+        className={cn("bg-white w-full fixed z-20", {
+          "lg:bg-white": headerHover,
+          "lg:bg-[#f0eef9]": !headerHover,
         })}
       >
-        <div className="container mx-auto flex items-center justify-between margin-auto px-[32px] max-w-[1425px]">
+        <div className="container mx-auto flex items-center lg:justify-between margin-auto px-[32px] max-w-[1425px]">
           <div className="flex items-center">
             <Image className="mr-6 inline-block" src="/icons/logo.svg" alt="Logo" width={151} height={30.73} />
-            <div className="flex items-center gap-6">
+            <div className="hidden lg:flex items-center gap-6">
               {topNavigationLinks.map((link, index) => (
                 <NavigationMenu key={index} className="hover:bg-white">
                   <NavigationMenuList>
@@ -97,9 +97,9 @@ export default function TopBarNavigation() {
           </div>
           <Button
             variant="default"
-            className={cn("text-base h-[40px] px-[24px] py-1 focus-outline-0 cursor-pointer", {
-              block: headerHover,
-              hidden: !headerHover,
+            className={cn("block text-base lg:h-[40px] lg:px-[24px] py-1 focus-outline-0 cursor-pointer", {
+              "lg:block": headerHover,
+              "lg:hidden": !headerHover,
             })}
           >
             Choose document
