@@ -135,7 +135,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
                 <Image src={imageUrl} alt={title || ""} layout="fill" objectFit="cover" className=" " />
               </div>
             )}
-            <div className="text-base font-medium leading-none">{title}</div>
+            <div className="text-black text-base font-medium leading-none">{title}</div>
           </a>
         </NavigationMenuLink>
       </li>
