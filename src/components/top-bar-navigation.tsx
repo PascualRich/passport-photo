@@ -35,7 +35,7 @@ const links: LinkProps[] = [
   },
   {
     title: "Popular Documents",
-    width: "600px",
+    width: "615px",
     items: [
       {
         title: "Baby Passport Photo",
@@ -62,18 +62,16 @@ const links: LinkProps[] = [
       <div className="bg-[#f9f6fe] flex p-5 rounded-md gap-5">
         <div className="flex flex-col justify-between">
           <div>
-            <span className="bg-orange-500 text-white font-semibold text-[10px] px-3 mb-5 flex-shrink-0">
-              Most Popular
-            </span>
+            <span className="bg-orange-500 text-white font-semibold text-xs px-3 mb-5 flex-shrink-0">Most Popular</span>
           </div>
           <div>
             <span className="font-semibold">US Passport Photo</span>
             <div className="flex gap-2">
-              <span className="text-[12px] text-gray-500">Size</span>
-              <span className="text-[12px] font-semibold">2x2 in</span>
+              <span className="text-xs text-gray-500">Size</span>
+              <span className="text-xs font-semibold">2x2 in</span>
             </div>
           </div>
-          <Button variant="default" className="text-[10px] focus-outline-0">
+          <Button variant="default" className="text-xs focus-outline-0 cursor-pointer">
             Choose document
           </Button>
         </div>
@@ -145,41 +143,51 @@ export default function TopBarNavigation() {
         onMouseLeave={() => setHeaderHoverState(false)}
         className={cn("w-full fixed z-20", {
           "bg-white": headerHover,
-          "bg-transparent": !headerHover,
+          "bg-[#f0eef9]": !headerHover,
         })}
       >
-        <div className="container mx-auto flex items-center justify-between max-w-[80vw]">
-          <div className="flex items-center gap-4">
-            <Image src="/icons/logo.svg" alt="Logo" width={151} height={27} className="h-7 w-auto" />
-
-            {links.map((link, index) => (
-              <NavigationMenu key={link.title}>
-                <NavigationMenuList>
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger
-                      className="bg-transparent py-10 font-medium border-b-3 border-b-transparent hover:bg-none hover:border-b-primary hover:text-primary rounded-none text-[16px] cursor-pointer"
-                      onMouseEnter={() => setIsMenuOpen(true)} // Open menu on hover
-                    >
-                      {link.title}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="flex" style={{ width: link.width || "300px" }}>
-                      <ul className={"grid gap-3 p-4"}>
-                        {link.items.map((item) => (
-                          <ListItem key={item.title} title={item.title} href={item.href} imageUrl={item?.imageUrl} />
-                        ))}
-                      </ul>
-                      {link.itemsSuffix && <div className="p-4">{link.itemsSuffix}</div>}
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-            ))}
+        <div className="container mx-auto flex items-center justify-between margin-auto px-[32px] max-w-[1425px]">
+          <div className="flex items-center">
+            <Image className="mr-6 inline-block" src="/icons/logo.svg" alt="Logo" width={151} height={30.73} />
+            <div className="flex items-center gap-6">
+              {links.map((link, index) => (
+                <NavigationMenu key={link.title} className="hover:bg-white">
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger
+                        className={cn(
+                          "bg-[#f0eef9] py-11 px-0 font-medium border-b-3 border-b-transparent hover:border-b-primary hover:text-primary rounded-none text-base cursor-pointer hover:bg-transparent focus:bg-transparent data-[state=open]:hover:bg-transparent data-[state=open]:focus:bg-transparent data-[state=open]:bg-transparent",
+                          {
+                            "bg-white": headerHover,
+                          }
+                        )}
+                        onMouseEnter={() => setIsMenuOpen(true)} // Open menu on hover
+                      >
+                        {link.title}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent className="flex" style={{ width: link.width || "300px" }}>
+                        <ul className={"grid gap-3 p-4"}>
+                          {link.items.map((item) => (
+                            <ListItem key={item.title} title={item.title} href={item.href} imageUrl={item?.imageUrl} />
+                          ))}
+                        </ul>
+                        {link.itemsSuffix && <div className="p-4">{link.itemsSuffix}</div>}
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+              ))}
+            </div>
           </div>
-          {headerHover && (
-            <Button variant="default" className="text-[16px] focus-outline-0">
-              Choose document
-            </Button>
-          )}
+          <Button
+            variant="default"
+            className={cn("text-base h-[40px] px-[24px] py-1 focus-outline-0 cursor-pointer", {
+              block: headerHover,
+              hidden: !headerHover,
+            })}
+          >
+            Choose document
+          </Button>
         </div>
       </header>
 
@@ -212,7 +220,7 @@ const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWit
                 <Image src={imageUrl} alt={title || ""} layout="fill" objectFit="cover" className=" " />
               </div>
             )}
-            <div className="text-[16px] font-medium leading-none">{title}</div>
+            <div className="text-base font-medium leading-none">{title}</div>
           </a>
         </NavigationMenuLink>
       </li>
