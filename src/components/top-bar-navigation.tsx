@@ -193,9 +193,8 @@ export default function TopBarNavigation() {
 
       {/* Black Overlay */}
       <div
-        className={cn("fixed top-0 left-0 w-full h-full bg-black z-10 transition-opacity", {
-          "opacity-0": !isMenuOpen,
-          "opacity-50": isMenuOpen,
+        className={cn("fixed top-0 left-0 w-full h-full bg-black z-10 opacity-50", {
+          hidden: !isMenuOpen,
         })}
       />
     </>
