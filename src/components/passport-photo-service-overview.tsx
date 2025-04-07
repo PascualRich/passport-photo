@@ -10,9 +10,9 @@ export default function PassportPhotoServiceOverview() {
           <br /> Photo Booth
         </PassportPhotoServiceOverviewTitle>
         <p className="text-base mt-10">
-          At Passport Photo Online, we bring the passport photo booth to you. Whether you're at home, in the office, or
-          on the go, our website and passport photo app make it easy to create official passport photos that meet{" "}
-          <a href="">State Department requirements.</a>
+          At Passport Photo Online, we bring the passport photo booth to you. Whether you&apos;re at home, in the
+          office, or on the go, our website and passport photo app make it easy to create official passport photos that
+          meet <a href="">State Department requirements.</a>
         </p>
         <p className="text-base mt-10">
           <b>Quick & Easy:</b> Our passport photo service lets you capture a compliant ID photo without leaving home.
@@ -102,11 +102,11 @@ export default function PassportPhotoServiceOverview() {
         </p>
 
         <PassportPhotoServiceOverviewTitle>How to Take a Passport Photo Online</PassportPhotoServiceOverviewTitle>
-        <p className="text-base mt-10">Here's how to make passport photos with our editor:</p>
+        <p className="text-base mt-10">Here&apos;s how to make passport photos with our editor:</p>
         <ol className="custom-counter list-none pl-6 mb-10">
           <li className="text-base mt-10 relative">
-            Take a picture following the in-app instructions or our guide on "
-            <a href="">How to take passport photos at home.</a>".
+            Take a picture following the in-app instructions or our guide on &quot;
+            <a href="">How to take passport photos at home.</a>&quot;.
           </li>
           <li className="text-base mt-10 relative">
             Upload the image to our passport photo maker using the button at the top of this page or directly to our
@@ -118,10 +118,10 @@ export default function PassportPhotoServiceOverview() {
           </li>
           <li className="text-base mt-10 relative">
             Next, one of our biometric photography experts will check your image to ensure it meets all official
-            requirements. We're available 24/7, so it won't take long.
+            requirements. We&apos;re available 24/7, so it won&apos;t take long.
           </li>
           <li className="text-base mt-10 relative">
-            That's it! You can download your digital image or wait 2-3 business days (on average) for your printed
+            That&apos;s it! You can download your digital image or wait 2-3 business days (on average) for your printed
             photographs.
           </li>
         </ol>
@@ -154,8 +154,8 @@ export default function PassportPhotoServiceOverview() {
           <b>What’s the best place to get a passport photo?</b>
         </p>
         <p className="text-base mb-10">
-          The best place to get a passport photo depends on your specific needs. If you're looking for comprehensive
-          passport services, USPS offers a full range of services, including photos.
+          The best place to get a passport photo depends on your specific needs. If you&apos;re looking for
+          comprehensive passport services, USPS offers a full range of services, including photos.
         </p>
         <p className="text-base mb-10">
           If you prefer to take your pictures at home, Passport Photo Online ensures that your photo meets all necessary

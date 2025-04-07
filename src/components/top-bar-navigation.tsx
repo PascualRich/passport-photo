@@ -67,7 +67,7 @@ export default function TopBarNavigation() {
             <Image className="mr-6 inline-block" src="/icons/logo.svg" alt="Logo" width={151} height={30.73} />
             <div className="flex items-center gap-6">
               {topNavigationLinks.map((link, index) => (
-                <NavigationMenu key={link.title} className="hover:bg-white">
+                <NavigationMenu key={index} className="hover:bg-white">
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       <NavigationMenuTrigger
@@ -118,7 +118,7 @@ export default function TopBarNavigation() {
 }
 
 const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a"> & { imageUrl?: string }>(
-  ({ className, title, imageUrl, children, ...props }, ref) => {
+  ({ className, title, imageUrl, ...props }, ref) => {
     return (
       <li>
         <NavigationMenuLink asChild>
