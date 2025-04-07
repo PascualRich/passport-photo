@@ -2,6 +2,7 @@ import TopBarNavigation from "@/components/top-bar-navigation";
 import type { Metadata } from "next";
 import { Inter, PT_Serif } from "next/font/google";
 import "./globals.css";
+import FooterNavigation from "@/components/footer-navigation";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${ptSerif.variable} antialiased`}>
         <TopBarNavigation />
         {children}
+        <FooterNavigation />
       </body>
     </html>
   );

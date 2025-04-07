@@ -128,4 +128,27 @@
   .font-pt-serif {
     font-family: var(--font-pt-serif), serif;
   }
+  a {
+    color: #385fd9;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .custom-counter {
+    counter-reset: step-counter;
+  }
+  
+  .custom-counter li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter) ".";
+    position: absolute;
+    left: -1.5em;
+    color: var(--primary);
+    font-weight: bold;
+  }
+  
 }
