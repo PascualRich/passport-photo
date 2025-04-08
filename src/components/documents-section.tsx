@@ -35,9 +35,9 @@ export default function DocumentsSection() {
             {mostSearchedDocuments.map((document) => (
               <div
                 key={document.title}
-                className="min-h-[326px] min-w-[285px] rounded-lg bg-[#f3f8fb] p-10 text-left hover:bg-[#D9E0F3] lg:min-h-[435px] lg:min-w-[350px]"
+                className="flex h-[350px] w-[280px] flex-col rounded-lg bg-[#f3f8fb] p-10 text-left hover:bg-[#D9E0F3] lg:min-h-[435px] lg:min-w-[350px]"
               >
-                <div className="relative -mt-24 mb-5 h-[250px] w-[180px] lg:-mt-24 lg:mb-10 lg:h-[320px] lg:w-[230px]">
+                <div className="relative -mt-24 mb-5 h-[245px] w-[180px] lg:-mt-24 lg:mb-10 lg:h-[320px] lg:w-[230px]">
                   <Image
                     className="object-cover"
                     src={document.imageUrl}
