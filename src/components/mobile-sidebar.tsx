@@ -12,7 +12,7 @@ import {
 import { useSidebar } from "./ui/sidebar";
 
 export default function MobileSidebar() {
-  const { openMobile, setOpenMobile } = useSidebar();
+  const { openMobile } = useSidebar();
 
   return (
     <div
