@@ -1,22 +1,15 @@
 "use client";
 
-import { footerNavigationLinks } from "@/data/footer-navigation-links";
+import { topNavigationLinks } from "@/data/top-navigation-links";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarHeader,
-  useSidebar,
-} from "./ui/sidebar";
-import { Sheet, SheetContent, SheetDescription, SheetTitle } from "./ui/sheet";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { useSidebar } from "./ui/sidebar";
 
 export default function MobileSidebar() {
   const { openMobile, setOpenMobile } = useSidebar();
@@ -32,7 +25,7 @@ export default function MobileSidebar() {
       )}
     >
       <Accordion type="single" collapsible className="w-full">
-        {footerNavigationLinks.map((link) => (
+        {topNavigationLinks.map((link) => (
           <AccordionItem key={link.title} value={`item-${link.title}`}>
             <AccordionTrigger className="text-base font-bold">
               {link.title}
