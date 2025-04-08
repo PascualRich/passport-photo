@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function HeroBanner() {
   return (
     <div className="flex justify-center bg-[#ececf6] w-full mt-[68px] lg:mt-[70px]">
-      <div className="flex flex-col lg:flex-row max-w-[1110px] gap-10 overflow-visible px-[18px] lg:px-4">
+      <div className="flex flex-col lg:flex-row lg:max-w-[1110px] gap-10 overflow-visible px-[18px] lg:px-4">
         <div className="flex flex-col gap-6 mt-11 lg:mt-28 w-full lg:w-1/2">
           <h1 className="font-pt-serif font-semibold text-balance text-[40px] lg:text-7xl tracking-[-1.2896px] lg:tracking-[-2.4px] leading-[46px] lg:leading-[80px] text-center lg:text-left text-[#1d243a]">
             Take a Passport Photo Online

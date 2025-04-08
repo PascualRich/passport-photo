@@ -10,7 +10,7 @@ export default function FooterNavigation() {
     <footer className="">
       {/* Main Footer */}
       <div className="flex flex-col justify-center items-center border-t border-t-[#dcdde6]">
-        <div className="flex flex-row gap-10 bg-white w-[1145px] py-10  ">
+        <div className="flex flex-row gap-10 bg-white lg:w-[1145px] py-10  ">
           <div className="">
             <Image className="mb-15 inline-block" src="/icons/logo.svg" alt="Logo" width={151} height={30.73} />
             <div className="flex flex-row gap-10">

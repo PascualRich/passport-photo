@@ -7,7 +7,7 @@ export default function FeedbackSection() {
   const [selectedStarIndex, setSelectedStarIndex] = React.useState(0);
   return (
     <div className="flex justify-center bg-white w-full">
-      <div className="flex flex-row items-end justify-center gap-14 my-30 pb-10 w-[1140px]">
+      <div className="flex flex-row items-end justify-center gap-14 my-30 pb-10 lg:w-[1140px]">
         <div className="flex flex-col gap-10 w-1/2">
           <Image
             src="/images/man-offering-hand.svg"

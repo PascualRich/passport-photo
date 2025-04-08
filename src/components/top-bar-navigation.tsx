@@ -87,7 +87,7 @@ export default function TopBarNavigation() {
           "bg-[#eeecf9]": !headerHover,
         })}
       >
-        <div className="container mx-auto flex items-center lg:justify-between margin-auto p-[18px] lg:py-0 lg:px-[32px] max-w-[1425px] gap-4 lg:gap-0">
+        <div className="container mx-auto flex items-center lg:justify-between margin-auto p-[18px] lg:py-0 lg:px-[32px] lg:max-w-[1425px] gap-4 lg:gap-0">
           <div className="max-w-[136px] lg:max-w-auto flex items-center">
             <Image
               className="mr-6 lg:w-[151px] lg:h-[30.73px]"
