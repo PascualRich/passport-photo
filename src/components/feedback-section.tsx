@@ -7,8 +7,8 @@ export default function FeedbackSection() {
   const [selectedStarIndex, setSelectedStarIndex] = React.useState(0);
   return (
     <div className="flex w-full justify-center bg-white">
-      <div className="my-30 flex flex-row items-end justify-center gap-14 pb-10 lg:w-[1140px]">
-        <div className="flex w-1/2 flex-col gap-10">
+      <div className="my-30 flex flex-col items-center justify-center gap-5 px-[18px] pb-10 lg:w-[1140px] lg:flex-row lg:items-end lg:gap-14 lg:px-0">
+        <div className="flex flex-col items-center gap-10 lg:w-1/2 lg:items-start">
           <Image
             src="/images/man-offering-hand.svg"
             alt="Offer"
@@ -16,21 +16,24 @@ export default function FeedbackSection() {
             height={188}
             className="scale-x-[-1] transform" // Flips the image horizontally
           />
-          <span className="font-pt-serif text-7xl leading-[80px] font-semibold tracking-[-2.4px] text-balance">
+          <span className="font-pt-serif hidden text-7xl leading-[80px] font-semibold tracking-[-2.4px] text-balance lg:block">
             Are You <br /> Satisfied <br /> With Our <br /> Service?
           </span>
-          <span className="text-2xl tracking-[-0.7504px]">
+          <span className="font-pt-serif block text-[40px] leading-[46px] font-semibold tracking-[-1.2896px] text-balance lg:hidden">
+            Are You Satisfied <br /> With Our Service?
+          </span>
+          <span className="text-center text-lg tracking-[-0.2px] lg:text-left lg:text-2xl lg:tracking-[-0.7504px]">
             Let us know how we’re doing. <br />
             Customer feedback is always welcome.
           </span>
         </div>
-        <div className="bg-border h-full w-[2px]"></div>{" "}
+        <div className="bg-border hidden h-full w-[2px] lg:block"></div>{" "}
         {/* The middle dividing line */}
-        <div className="flex w-1/2 flex-col items-center justify-center text-center">
-          <span className="font-pt-serif text-[40px] font-semibold text-balance">
+        <div className="flex flex-col items-center justify-center text-center lg:w-1/2">
+          <span className="font-pt-serif hidden text-[40px] font-semibold text-balance lg:block">
             Rate Your Reading <br /> Experience:
           </span>
-          <div className="my-20 flex flex-row items-center gap-2">
+          <div className="my-10 mb-10 flex flex-row items-center gap-2 lg:my-20">
             {[1, 2, 3, 4, 5].map((_, index) => (
               <Star
                 key={index}
@@ -40,7 +43,7 @@ export default function FeedbackSection() {
               />
             ))}
           </div>
-          <span className="mb-5 text-2xl">
+          <span className="mb-5 text-lg lg:text-2xl">
             <b>Rating: 4.74/5</b>
           </span>
           <span className="text-base text-[#a7adb5]">
