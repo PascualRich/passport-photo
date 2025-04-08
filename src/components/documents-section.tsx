@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { mostSearchedDocuments, popularDocuments, popularDocumentsAroundTheWorld } from "@/data/documents";
+import {
+  mostSearchedDocuments,
+  popularDocuments,
+  popularDocumentsAroundTheWorld,
+} from "@/data/documents";
 
 export default function DocumentsSection() {
   return (
@@ -80,8 +84,8 @@ export default function DocumentsSection() {
                 className="size-[24px] lg:hidden"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"
                   fill="#1D253B"
                 ></path>
@@ -124,8 +128,8 @@ export default function DocumentsSection() {
                 className="size-[24px] lg:hidden"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"
                   fill="#1D253B"
                 ></path>
