@@ -1,8 +1,10 @@
+import FooterNavigation from "@/components/footer-navigation";
+import MobileSidebar from "@/components/mobile-sidebar";
 import TopBarNavigation from "@/components/top-bar-navigation";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import type { Metadata } from "next";
 import { Inter, PT_Serif } from "next/font/google";
 import "./globals.css";
-import FooterNavigation from "@/components/footer-navigation";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,9 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${ptSerif.variable} antialiased`}>
-        <TopBarNavigation />
-        {children}
-        <FooterNavigation />
+        <SidebarProvider>
+          <div className="max-w-screen overflow-hidden">
+            <TopBarNavigation />
+            <MobileSidebar />
+            {children}
+            <FooterNavigation />
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   );
