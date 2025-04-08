@@ -16,11 +16,11 @@ const TestimonialCard = ({
   quoteIcon = "/icons/quote.svg",
 }: TestimonialCardProps) => {
   return (
-    <div className="mb-10 flex flex-row items-start gap-10">
+    <div className="flex flex-col items-start gap-5 lg:mb-10 lg:flex-row lg:gap-10">
       <Image src={quoteIcon} alt="Quote" width={32} height={32} />
       <div className="flex flex-col gap-5">
         <p>{quote}</p>
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-col items-start justify-between lg:flex-row lg:items-center">
           <span>{author}</span>
           <div className="flex flex-row items-center gap-2">
             <span>View full review on</span>
