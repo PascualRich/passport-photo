@@ -2,35 +2,42 @@ import Image from "next/image";
 
 export default function PassportPhotoMakerExplanation() {
   return (
-    <div className="flex justify-center bg-[#f3f8fb] w-full">
+    <div className="flex justify-center bg-[#f3f8fb] w-full px-4">
       <div className="flex flex-col my-20 justify-start items-center text-center lg:items-start lg:text-left lg:w-[1110px]">
-        <span className="font-pt-serif w-[90vw] text-2xl lg:w-auto lg:text-[40px] font-bold">
+        <h2 className="font-pt-serif w-full text-[28px] lg:text-[40px] font-bold leading-snug text-[#1e293b]">
           How Does Our Passport-Size Photo Maker Work?
-        </span>
-        <div className="flex flex-col lg:flex-row gap-10 mt-10">
-          <div className="flex items-center lg:items-start text-center lg:text-left flex-col gap-5">
-            <Image src="/images/how_It_Works1.webp" alt="Step 1" width={125} height={125} />
-            <span className="text-lg lg:text-[32px] font-semibold">Take or upload a photo</span>
-            <p className="text-sm lg:text-lg">
-              Take a selfie or upload one from your <br /> gallery. Follow the on-screen <br /> instructions to meet all
-              <br /> the requirements.
+        </h2>
+        <div className="flex flex-col lg:flex-row justify-between gap-10 mt-10 w-full font-sans">
+          {/* Step 1 */}
+          <div className="flex items-center lg:items-start text-center lg:text-left flex-col gap-5 max-w-sm">
+            <Image src="/images/how_It_Works1.webp" alt="Step 1" width={64} height={64} />
+            <span className="text-xl lg:text-[20px] font-semibold text-[#1e293b]">
+              Take or upload a photo
+            </span>
+            <p className="text-sm lg:text-base text-slate-700 leading-relaxed">
+              Take a selfie or upload one from your gallery. Follow the on-screen instructions to meet all the requirements.
             </p>
           </div>
-          <div className="flex items-center lg:items-start text-center lg:text-left flex-col gap-5">
-            <Image src="/images/how_It_Works2.webp" alt="Step 2" width={125} height={125} />
-            <span className="text-lg lg:text-[32px] font-semibold">Get your photo verified</span>
-            <p className="text-sm lg:text-lg">
-              Our innovative AI software will fine-
-              <br />
-              tune your photo. Then, our in-house <br /> experts will ensure 100% <br /> compliance.
+
+          {/* Step 2 */}
+          <div className="flex items-center lg:items-start text-center lg:text-left flex-col gap-5 max-w-sm">
+            <Image src="/images/how_It_Works2.webp" alt="Step 2" width={64} height={64} />
+            <span className="text-xl lg:text-[20px] font-semibold text-[#1e293b]">
+              Get your photo verified
+            </span>
+            <p className="text-sm lg:text-base text-slate-700 leading-relaxed">
+              Our innovative AI software will fine-tune your photo. Then, our in-house experts will ensure 100% compliance.
             </p>
           </div>
-          <div className="flex items-center lg:items-start text-center lg:text-left flex-col gap-5">
-            <Image src="/images/how_It_Works3.webp" alt="Step 3" width={125} height={125} />
-            <span className="text-lg lg:text-[32px] font-semibold">Submit your photo</span>
-            <p className="text-sm lg:text-lg">
-              Your photo is ready for submission. <br /> Get a digital photo instantly, or have <br /> printouts
-              delivered to your door for <br /> free.
+
+          {/* Step 3 */}
+          <div className="flex items-center lg:items-start text-center lg:text-left flex-col gap-5 max-w-sm">
+            <Image src="/images/how_It_Works3.webp" alt="Step 3" width={64} height={64} />
+            <span className="text-xl lg:text-[20px] font-semibold text-[#1e293b]">
+              Submit your photo
+            </span>
+            <p className="text-sm lg:text-base text-slate-700 leading-relaxed">
+              Your photo is ready for submission. Get a digital photo instantly, or have printouts delivered to your door for free.
             </p>
           </div>
         </div>
