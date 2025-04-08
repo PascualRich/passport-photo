@@ -8,6 +8,7 @@ interface LinkProps {
     title: string;
     href: string;
     imageUrl?: string;
+    banner?: string;
   }>;
   itemsSuffix?: React.ReactNode;
 }
@@ -16,15 +17,30 @@ export const topNavigationLinks: LinkProps[] = [
   {
     title: "Resources",
     items: [
-      { title: "Passport Photo Resizer", href: "resources/passport-photo-resizer" },
-      { title: "How to Take a Passport Photo with an iPhone", href: "/how-to-take-a-passport-photo-with-an-iphone" },
-      { title: "How to Take a Passport Photo with Android", href: "/how-to-take-a-passport-photo-with-android" },
+      {
+        title: "Passport Photo Resizer",
+        href: "resources/passport-photo-resizer",
+      },
+      {
+        title: "How to Take a Passport Photo with an iPhone",
+        href: "/how-to-take-a-passport-photo-with-an-iphone",
+      },
+      {
+        title: "How to Take a Passport Photo with Android",
+        href: "/how-to-take-a-passport-photo-with-android",
+      },
     ],
   },
   {
     title: "Popular Documents",
     width: "615px",
     items: [
+      {
+        title: "US Passport Photo",
+        href: "/popular-documents/baby-passport-photo",
+        imageUrl: "/images/US_passport_photo_cover_f9064c684a.webp",
+        banner: "Most Popular",
+      },
       {
         title: "Baby Passport Photo",
         href: "/popular-documents/baby-passport-photo",
@@ -47,10 +63,12 @@ export const topNavigationLinks: LinkProps[] = [
       },
     ],
     itemsSuffix: (
-      <div className="bg-[#f9f6fe] flex p-5 rounded-md gap-5">
+      <div className="flex gap-5 rounded-md bg-[#f9f6fe] p-5">
         <div className="flex flex-col justify-between">
           <div>
-            <span className="bg-orange-500 text-white font-semibold text-xs px-3 mb-5 flex-shrink-0">Most Popular</span>
+            <span className="mb-5 flex-shrink-0 bg-orange-500 px-3 text-xs font-semibold text-white">
+              Most Popular
+            </span>
           </div>
           <div>
             <span className="font-semibold">US Passport Photo</span>
@@ -59,19 +77,33 @@ export const topNavigationLinks: LinkProps[] = [
               <span className="text-xs font-semibold">2x2 in</span>
             </div>
           </div>
-          <Button variant="default" className="text-xs focus-outline-0 cursor-pointer">
+          <Button
+            variant="default"
+            className="focus-outline-0 cursor-pointer text-xs"
+          >
             Choose document
           </Button>
         </div>
-        <Image src="/images/US_passport_photo_cover_f9064c684a.webp" alt="US Passport Photo" width={105} height={150} />
+        <Image
+          src="/images/US_passport_photo_cover_f9064c684a.webp"
+          alt="US Passport Photo"
+          width={105}
+          height={150}
+        />
       </div>
     ),
   },
   {
     title: "How it Works",
     items: [
-      { title: "How to Take a Photo", href: "how-it-works/how-to-take-a-photo" },
-      { title: "AI and Expert Verification", href: "how-it-works/ai-and-expert-verification" },
+      {
+        title: "How to Take a Photo",
+        href: "how-it-works/how-to-take-a-photo",
+      },
+      {
+        title: "AI and Expert Verification",
+        href: "how-it-works/ai-and-expert-verification",
+      },
       { title: "Guarantee", href: "/how-it-works/guarantee" },
       { title: "Delivery", href: "/how-it-works/delivery" },
     ],

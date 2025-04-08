@@ -17,7 +17,7 @@ export default function MobileSidebar() {
   return (
     <div
       className={cn(
-        "bg-sidebar text-sidebar-foreground fixed top-0 z-10 mt-[68px] h-screen w-screen p-4 transition-transform duration-300 ease-in-out md:hidden",
+        "bg-sidebar text-sidebar-foreground fixed top-0 z-10 mt-[68px] h-screen w-screen transition-transform duration-300 ease-in-out md:hidden",
         {
           "translate-x-0": openMobile,
           "translate-x-full": !openMobile,
@@ -27,17 +27,31 @@ export default function MobileSidebar() {
       <Accordion type="single" collapsible className="w-full">
         {topNavigationLinks.map((link) => (
           <AccordionItem key={link.title} value={`item-${link.title}`}>
-            <AccordionTrigger className="text-base font-bold">
+            <AccordionTrigger className="px-[18px] py-[24px] text-lg font-semibold">
               {link.title}
             </AccordionTrigger>
-            <AccordionContent className="flex flex-col">
+            <AccordionContent className="flex flex-col justify-center gap-5 px-[18px]">
               {link.items?.map((item) => (
                 <a
                   href={item.href}
                   key={item.title}
                   className="mb-2 text-base text-black"
                 >
+                  {item.imageUrl && (
+                    <Image
+                      className="mr-3 inline-block"
+                      src={item.imageUrl}
+                      alt={item.title}
+                      width={26}
+                      height={37}
+                    />
+                  )}
                   {item.title}
+                  {item.banner && (
+                    <span className="ml-5 bg-[#ff9500] px-[9px] py-[3px] text-[10px] font-semibold text-white">
+                      {item.banner}
+                    </span>
+                  )}
                 </a>
               ))}
             </AccordionContent>
