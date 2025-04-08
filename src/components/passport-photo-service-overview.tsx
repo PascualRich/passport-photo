@@ -201,7 +201,7 @@ interface PassportPhotoServiceOverviewTitleProps {
 
 function PassportPhotoServiceOverviewTitle({ children }: PassportPhotoServiceOverviewTitleProps) {
   return (
-    <span className="text-[40px] lg:text-5xl font-bold tracking-[-2.4px] lg:tracking-[-1.6px] leading-[56px] lg:leading-[67px]">
+    <span className="text-[40px] leading-[56px] font-bold tracking-[-2.4px] lg:text-5xl lg:leading-[67px] lg:tracking-[-1.6px]">
       {children}
     </span>
   );
