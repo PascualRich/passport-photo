@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${ptSerif.variable} antialiased`}>
         <SidebarProvider>
-          <div className="max-w-screen overflow-hidden">
+          <div className="w-screen overflow-hidden">
             <TopBarNavigation />
             <MobileSidebar />
             {children}
