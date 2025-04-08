@@ -37,7 +37,7 @@ export default function MobileSidebar() {
                   key={item.title}
                   className="mb-2 text-base text-black"
                 >
-                  {item.imageUrl && (
+                  {item?.imageUrl && (
                     <Image
                       className="mr-3 inline-block"
                       src={item.imageUrl}
@@ -47,7 +47,7 @@ export default function MobileSidebar() {
                     />
                   )}
                   {item.title}
-                  {item.banner && (
+                  {item?.banner && (
                     <span className="ml-5 bg-[#ff9500] px-[9px] py-[3px] text-[10px] font-semibold text-white">
                       {item.banner}
                     </span>
