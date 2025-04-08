@@ -6,17 +6,17 @@ import React from "react";
 export default function FeedbackSection() {
   const [selectedStarIndex, setSelectedStarIndex] = React.useState(0);
   return (
-    <div className="flex justify-center bg-white w-full">
-      <div className="flex flex-row items-end justify-center gap-14 my-30 pb-10 lg:w-[1140px]">
-        <div className="flex flex-col gap-10 w-1/2">
+    <div className="flex w-full justify-center bg-white">
+      <div className="my-30 flex flex-row items-end justify-center gap-14 pb-10 lg:w-[1140px]">
+        <div className="flex w-1/2 flex-col gap-10">
           <Image
             src="/images/man-offering-hand.svg"
             alt="Offer"
             width={248}
             height={188}
-            className="transform scale-x-[-1]" // Flips the image horizontally
+            className="scale-x-[-1] transform" // Flips the image horizontally
           />
-          <span className="font-pt-serif font-semibold text-balance text-7xl tracking-[-2.4px] leading-[80px]">
+          <span className="font-pt-serif text-7xl leading-[80px] font-semibold tracking-[-2.4px] text-balance">
             Are You <br /> Satisfied <br /> With Our <br /> Service?
           </span>
           <span className="text-2xl tracking-[-0.7504px]">
@@ -24,12 +24,13 @@ export default function FeedbackSection() {
             Customer feedback is always welcome.
           </span>
         </div>
-        <div className="w-[2px] h-full bg-border"></div> {/* The middle dividing line */}
-        <div className="flex flex-col items-center justify-center text-center w-1/2">
-          <span className="font-pt-serif font-semibold text-balance text-[40px]">
+        <div className="bg-border h-full w-[2px]"></div>{" "}
+        {/* The middle dividing line */}
+        <div className="flex w-1/2 flex-col items-center justify-center text-center">
+          <span className="font-pt-serif text-[40px] font-semibold text-balance">
             Rate Your Reading <br /> Experience:
           </span>
-          <div className="flex flex-row gap-2 items-center my-20">
+          <div className="my-20 flex flex-row items-center gap-2">
             {[1, 2, 3, 4, 5].map((_, index) => (
               <Star
                 key={index}
@@ -39,10 +40,12 @@ export default function FeedbackSection() {
               />
             ))}
           </div>
-          <span className="text-2xl mb-5">
+          <span className="mb-5 text-2xl">
             <b>Rating: 4.74/5</b>
           </span>
-          <span className="text-base text-[#a7adb5]">Number of votes: 46523</span>
+          <span className="text-base text-[#a7adb5]">
+            Number of votes: 46523
+          </span>
         </div>
       </div>
     </div>
