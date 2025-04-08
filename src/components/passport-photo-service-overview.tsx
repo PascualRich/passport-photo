@@ -4,7 +4,7 @@ import TestimonialCard from "./testimonial-card";
 export default function PassportPhotoServiceOverview() {
   return (
     <div className="flex justify-center bg-white w-full">
-      <div className="flex flex-col my-20 justify-start w-[800px]">
+      <div className="flex flex-col my-20 justify-start w-[800px] px-5">
         <PassportPhotoServiceOverviewTitle>
           Welcome to Passport Photo Online: Your Trusted Digital Passport
           <br /> Photo Booth
@@ -171,5 +171,9 @@ interface PassportPhotoServiceOverviewTitleProps {
 }
 
 function PassportPhotoServiceOverviewTitle({ children }: PassportPhotoServiceOverviewTitleProps) {
-  return <span className="text-5xl font-bold tracking-[-1.6px] leading-[67px]">{children}</span>;
+  return (
+    <span className="text-[40px] lg:text-5xl font-bold tracking-[-2.4px] lg:tracking-[-1.6px] leading-[56px] lg:leading-[67px]">
+      {children}
+    </span>
+  );
 }

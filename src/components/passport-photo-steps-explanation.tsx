@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function PassportPhotoMakerExplanation() {
   return (
     <div className="flex justify-center bg-[#f3f8fb] w-full">
-      <div className="flex flex-col my-20 justify-start items-center text-center lg:items-start lg:text-left w-[1110px]">
+      <div className="flex flex-col my-20 justify-start items-center text-center lg:items-start lg:text-left lg:w-[1110px]">
         <span className="font-pt-serif w-[90vw] text-2xl lg:w-auto lg:text-[40px] font-bold">
           How Does Our Passport-Size Photo Maker Work?
         </span>
