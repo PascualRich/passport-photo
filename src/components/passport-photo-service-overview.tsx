@@ -12,8 +12,8 @@ export default function PassportPhotoServiceOverview() {
         </div>
         <p className="mt-10 text-[14px] leading-[28px] font-normal lg:text-[16px]">
           At Passport Photo Online, we bring the passport photo booth to you.
-          Whether you're at home, in the office, or on the go, our website and
-          passport photo app make it easy to create official passport photos
+          Whether you&apos;re at home, in the office, or on the go, our website
+          and passport photo app make it easy to create official passport photos
           that meet{" "}
           <a href="" className="text-blue-600 underline">
             State Department requirements.
